@@ -13,7 +13,7 @@ version: '2'
 
 services:
   smsd:
-    image: ghcr.io/andrestaffe/smstools3
+    image: ghcr.io/andrestaffe/docker-smstools3
     restart: unless-stopped
     devices:
     # Your modem
