@@ -1,6 +1,7 @@
 FROM debian:stable-slim
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -qq -y smstools \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir -p /var/log/smstools/smsd_stats /var/run/smstools
 
 CMD ["smsd", "-t"]
